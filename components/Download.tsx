@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Box, Button, Container, Paper, Stack } from "@mui/material";
 import * as htmlToImage from "html-to-image";
-// import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 
 interface DownloadProps {

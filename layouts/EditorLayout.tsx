@@ -9,6 +9,14 @@ import Link from "next/link";
 
 const drawerWidth = 400;
 
+const drawerStyle = {
+  display: { xs: "none", sm: "block" },
+  "& .MuiDrawer-paper": {
+    boxSizing: "border-box",
+    width: drawerWidth,
+    p: 3,
+  },
+};
 interface Props {
   form: React.ReactNode;
   preview: React.ReactNode;
@@ -28,18 +36,7 @@ export const EditorLayout = (props: Props) => {
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
       >
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: "none", sm: "block" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-              p: 3,
-            },
-          }}
-          open
-        >
+        <Drawer variant="permanent" sx={drawerStyle} open>
           <Box>
             <IconButton LinkComponent={Link} href="/" edge="start">
               <KeyboardBackspaceIcon />
@@ -51,15 +48,14 @@ export const EditorLayout = (props: Props) => {
       </Box>
       <Box
         component="main"
+        p={1}
+        px={10}
+        flex={1}
         sx={{
-          flexGrow: 1,
-          p: 1,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
       >
-        <Box px={10} mt={5}>
-          {preview}
-        </Box>
+        {preview}
       </Box>
     </Box>
   );

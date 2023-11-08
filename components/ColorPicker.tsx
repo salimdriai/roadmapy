@@ -30,20 +30,16 @@ export const ColorPicker = ({ color, setColor }: ColorPickerProps) => {
   return (
     <Box position="relative">
       <Button
-        sx={{
-          height: "100%",
-          borderColor: "divider",
-          width: "120px",
-        }}
         color="inherit"
+        aria-describedby={id}
+        variant="outlined"
+        onClick={toggleColorPicker}
+        sx={{ height: "100%", borderColor: "divider", width: "120px" }}
         endIcon={
           <CircleIcon
             sx={{ color, border: "1px solid #ccc", borderRadius: "50%" }}
           />
         }
-        aria-describedby={id}
-        variant="outlined"
-        onClick={toggleColorPicker}
       >
         {color}
       </Button>
