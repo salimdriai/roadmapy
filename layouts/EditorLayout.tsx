@@ -1,8 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Link from "next/link";
@@ -48,7 +46,7 @@ export const EditorLayout = (props: Props) => {
       </Box>
       <Box
         component="main"
-        p={1}
+        py={4}
         px={10}
         flex={1}
         sx={{

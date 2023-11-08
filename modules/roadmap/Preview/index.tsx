@@ -7,7 +7,6 @@ import { useAppDispatch, useAppSelector } from "features/store";
 
 const Preview = () => {
   const { roadmap } = useAppSelector((state) => state.roadmap);
-  console.log("ROADMAP", roadmap);
 
   if (!roadmap.length)
     return <Typography align="center">create your first step</Typography>;
